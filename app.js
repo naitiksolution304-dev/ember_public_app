@@ -40,9 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const progress = Math.min(elapsed / duration, 1);
       // Ease-out cubic for a smooth deceleration
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
+      // Re-read data-target live on every frame, rather than closing over
+      // the value this animation started with. The stats section sits right
+      // below the hero, so this animation typically starts (with whatever
+      // static fallback is hardcoded in the HTML) before the commission-rate
+      // / live-pricing fetch resolves — since this loop otherwise always
+      // runs to completion regardless of later DOM changes, it would paint
+      // over a fetch-driven update on the very next frame and settle back on
+      // the stale value once done, making the fetch's correction invisible.
+      const liveTarget = parseInt(element.getAttribute('data-target'), 10) || target;
+      const current = Math.round(eased * liveTarget);
 
-      if (target >= 1000) {
+      if (liveTarget >= 1000) {
         element.textContent = current.toLocaleString('en-IN') + '+';
       } else {
         element.textContent = current;
