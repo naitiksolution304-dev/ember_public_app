@@ -1,0 +1,1 @@
+# ember_public_app
