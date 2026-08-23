@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember Connect — Connect Instantly. Chat Freely.</title>
+  <meta name="description"
+    content="Discover and video call instant matches on Ember Connect. Watch ads to earn credits in Casual Mode, or purchase plans for premium high-quality connections.">
+  <link rel="canonical" href="https://emberconnect.in/">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://emberconnect.in/">
+  <meta property="og:title" content="Ember Connect — Connect Instantly. Chat Freely.">
+  <meta property="og:description"
+    content="Discover and video call instant matches on Ember Connect. Watch ads to earn credits in Casual Mode, or purchase plans for premium high-quality connections.">
+  <meta property="og:image" content="https://emberconnect.in/profile.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://emberconnect.in/">
+  <meta name="twitter:title" content="Ember Connect — Connect Instantly. Chat Freely.">
+  <meta name="twitter:description"
+    content="Discover and video call instant matches on Ember Connect. Watch ads to earn credits in Casual Mode, or purchase plans for premium high-quality connections.">
+  <meta name="twitter:image" content="https://emberconnect.in/profile.png">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=1">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=1">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
+  <link rel="stylesheet" href="style.css?v=20260810">
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Ember Connect" class="logo-img">
+        Ember <span>Connect</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+      <a href="#download" class="nav-btn">Download App</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-pill">🔥 India's fastest growing video matching app</div>
+        <h1>Connect Instantly.<br><span>Chat Freely.</span></h1>
+        <p class="hero-subtitle">
+          Discover real people, make genuine connections, and enjoy instant video calls. Earn free call credits by
+          watching short videos, or upgrade to premium plans for unlimited access.
+        </p>
+        <div class="download-badges" id="download">
+          <!-- Play Store Badge -->
+          <a href="https://play.google.com/store/apps/details?id=com.ember.ember_app" target="_blank"
+            rel="noopener noreferrer" class="badge" id="badgeGooglePlay" title="Get it on Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.688 1.556a1 1 0 010 1.728l-2.688 1.556L15.37 12l2.328-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+            </svg>
+            <div class="badge-text">
+              <span>Get it on</span>
+              <span>Google Play</span>
+            </div>
+          </a>
+          <!-- App Store Badge -->
+          <button type="button" class="badge" id="badgeAppStore" title="Coming soon on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            <div class="badge-text">
+              <span>Download on the</span>
+              <span>App Store</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- App Interface Phone Mockup -->
+      <div class="mockup-wrapper">
+        <div class="mockup-glow"></div>
+        <div class="demo-hint" id="demoHint">Tap to try it ↓</div>
+        <div class="phone-mockup float-animation">
+          <div class="phone-screen" id="phoneDemo">
+            <div class="phone-notch"></div>
+            <div class="screen-header">
+              <div class="screen-title">Ember Connect</div>
+              <div class="screen-credits" id="demoCredits">2.0m</div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-card" id="demoCard">
+                <div class="card-img" id="demoCardImg"
+                  style="background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.75) 100%), url('profile.png') center/cover no-repeat;">
+                  <div class="card-details">
+                    <div class="card-name">Aanya, 23</div>
+                    <div class="card-bio">Active now · New Delhi</div>
+                  </div>
+                </div>
+
+                <!-- Match reveal overlay -->
+                <div class="match-overlay" id="matchOverlay">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                  <div class="match-title">It's a Match!</div>
+                  <div class="match-sub">Starting your call…</div>
+                </div>
+
+                <!-- In-call overlay -->
+                <div class="call-overlay" id="callOverlay">
+                  <div class="call-avatar" id="callAvatar"></div>
+                  <div class="call-name" id="callName">Aanya</div>
+                  <div class="call-status" id="callStatus">Calling…</div>
+                  <div class="call-timer" id="callTimer">00:00</div>
+                  <div class="call-end-btn" id="callEndBtn" title="End call">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-actions" id="demoActions">
+                <div class="screen-btn" id="btnSkip" title="Pass">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                  </svg>
+                </div>
+                <div class="screen-btn" id="btnLike" title="Like">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="screen-btn like-btn" id="btnCall" title="Call now">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item fade-in">
+          <div>&#8377;<span class="stat-number" data-target="150" id="statStartingPrice"></span></div>
+          <div class="stat-label">Starting Price for Call Plans</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in">
+          <div><span class="stat-number" data-target="60" id="statEarnerRevenueShare">60</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Revenue Share for Earners</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in">
+          <div><span class="stat-number" data-target="100"></span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Photo-Verified Profiles</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-in">
+          <div><span class="stat-number" data-target="2"></span><span class="stat-suffix"> min</span></div>
+          <div class="stat-label">Free Credit Per Ad Watched</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <h2>Why Choose <span>Ember Connect?</span></h2>
+          <p>Every feature is crafted to deliver a seamless, secure, and rewarding experience.</p>
+        </div>
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">01</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <h3>Instant Video Calling</h3>
+            <p>Skip the endless messaging. Match and jump straight into secure, low-latency video and voice calls
+              powered by enterprise-grade infrastructure.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">02</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <h3>Earning &amp; Casual Mode</h3>
+            <p>Choose your style. Earner mode lets you monetize your calling time with a generous 60% revenue split.
+              Casual mode is perfect for simple, free conversations.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">03</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                </path>
+              </svg>
+            </div>
+            <h3>Privacy First</h3>
+            <p>Fully compliant with India's DPDP Act 2023. We encrypt tokens, store consent server-side, and support
+              instant data erasure upon request.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">04</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <h3>Watch Ads, Talk Free</h3>
+            <p>No money? No problem. Watch a short video ad to earn 2 minutes of call credit. Credits are tracked to the
+              second — nothing goes to waste.</p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">05</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z">
+                </path>
+              </svg>
+            </div>
+            <h3>Verified Profiles</h3>
+            <p>Every profile goes through photo verification to keep the community authentic, safe, and full of real
+              people looking for genuine interactions.</p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="feature-card fade-in">
+            <div class="feature-card-index">06</div>
+            <div class="feature-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+              </svg>
+            </div>
+            <h3>Flexible Plans</h3>
+            <p>Choose from multiple subscription tiers crafted for every budget — from pay-per-call packs to unlimited
+              monthly plans with bonus minutes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <h2>How <span>It Works</span></h2>
+          <p>Getting started takes less than a minute. Here's your journey from sign-up to your first call.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card fade-in">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </div>
+            <h3>Create Your Profile</h3>
+            <p>Sign up with your phone number, add your best photos, and verify your identity in seconds.</p>
+          </div>
+          <div class="step-connector fade-in"></div>
+          <div class="step-card fade-in">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <h3>Discover Matches</h3>
+            <p>Browse through verified profiles. Swipe, like, and send connection requests to people you're interested
+              in.</p>
+          </div>
+          <div class="step-connector fade-in"></div>
+          <div class="step-card fade-in">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <h3>Start Video Calling</h3>
+            <p>Once connected, start a high-quality video call instantly. Watch an ad or use your plan minutes — it's
+              your choice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <h2>Simple, <span>Transparent Pricing</span></h2>
+          <p>Start free with rewarded ads, or buy call minutes upfront — no hidden fees, no recurring lock-in.</p>
+        </div>
+        <div class="pricing-grid" id="pricingGrid">
+          <div class="pricing-card fade-in" data-static="true">
+            <h3>Casual Mode</h3>
+            <div class="price"><span class="price-amount">Free</span></div>
+            <p class="price-desc">Watch a short ad to earn 2 minutes of call credit, tracked to the second.</p>
+            <ul class="pricing-features">
+              <li>No payment required</li>
+              <li>Unlimited ad-earned credit</li>
+              <li>Credits never expire mid-call</li>
+            </ul>
+            <div class="pricing-card fade-in">
+              <h3>30 Mins Plan</h3>
+              <div class="price"><span class="price-currency">&#8377;</span><span class="price-amount"
+                  data-target="99">99</span></div>
+              <p class="price-desc">30 minutes of call time for quick connections.</p>
+              <ul class="pricing-features">
+                <li>30 minutes of calling</li>
+                <li>&#8377;3.30 per minute</li>
+                <li>One-time purchase</li>
+              </ul>
+            </div>
+            <div class="pricing-card fade-in">
+              <h3>1 Hour Plan</h3>
+              <div class="price"><span class="price-currency">&#8377;</span><span class="price-amount"
+                  data-target="150">150</span></div>
+              <p class="price-desc">60 minutes of call time, ready to use whenever you match.</p>
+              <ul class="pricing-features">
+                <li>60 minutes of calling</li>
+                <li>&#8377;2.50 per minute</li>
+                <li>One-time purchase</li>
+              </ul>
+            </div>
+            <div class="pricing-card fade-in">
+              <h3>2 Hour Plan</h3>
+              <div class="price"><span class="price-currency">&#8377;</span><span class="price-amount"
+                  data-target="250">250</span></div>
+              <p class="price-desc">120 minutes of call time for regular callers.</p>
+              <ul class="pricing-features">
+                <li>120 minutes of calling</li>
+                <li>&#8377;2.08 per minute</li>
+                <li>One-time purchase</li>
+              </ul>
+            </div>
+            <div class="pricing-card featured fade-in">
+              <div class="pricing-badge">Best Value</div>
+              <h3>5 Hour Plan</h3>
+              <div class="price"><span class="price-currency">&#8377;</span><span class="price-amount"
+                  data-target="500">500</span></div>
+              <p class="price-desc">300 minutes of call time at the lowest per-minute rate we offer.</p>
+              <ul class="pricing-features">
+                <li>300 minutes of calling</li>
+                <li>&#8377;1.67 per minute</li>
+                <li>One-time purchase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" id="faq">
+      <div class="section-header fade-in">
+        <h2>Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>What is Ember Connect?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Ember Connect is a video matching platform that allows users to instantly connect via secure video and
+              voice calls. Users can watch rewarded ads to earn credits for free calls, or buy premium plans. Verified
+              profiles can connect casually or offer their time as Earners.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>How does the ad-reward system work?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Users can watch short video ads to earn 2 minutes of call credit. Credits are calculated to the exact
+              second, meaning if your call ends early, any remaining seconds are preserved for future calls with the
+              same person.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>How do earners get paid?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Earners receive 60% of the revenue generated from subscription-based call minutes. Earnings accumulate in
+              real-time and can be requested for payout via bank transfer or UPI once the minimum balance threshold is
+              reached.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Is my personal data secure?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. Under the Digital Personal Data Protection (DPDP) Act 2023, we store active consent logs
+              server-side and protect verification uploads using short-lived signed URLs. You can withdraw your consent
+              or request data erasure at any time from your profile settings.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>Is it free to use?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Ember Connect is free to download and use. You can earn free call credits by watching short video
+              ads. If you'd rather skip ads, call minute packs start from just ₹150.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question">
+            <span>How is verification done?</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>We use real-time selfie verification against your uploaded profile photos. Uploads are encrypted and
+              stored temporarily using secure short-lived URLs, then automatically deleted after verification is
+              complete.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container fade-in">
+        <h2>Ready to make your<br><span>first connection?</span></h2>
+        <p>Download Ember Connect today and start meeting real people through instant video calls.</p>
+        <a href="#download" class="cta-btn">Download Now — It's Free</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Ember <span>Connect</span></h4>
+        <p>A secure video matching platform. Match instantly, talk freely, and protect your privacy on your own terms.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
+          <li><a href="/child-safety">Child Safety Policy</a></li>
+          <li><a href="/guidelines">Community Guidelines</a></li>
+          <li><a href="/safety">Safety Tips</a></li>
+          <li><a href="/refunds">Refunds &amp; Cancellations</a></li>
+          <li><a href="/shipping">Shipping &amp; Delivery</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links footer-officer">
+        <h5>Grievance Officer</h5>
+        <p><strong>Prince Yadav</strong></p>
+        <p>Email: naitiksolution304@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Ember Connect is intended for users aged 18 and above.</p>
+      <p>&copy; 2026 SHANTY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
