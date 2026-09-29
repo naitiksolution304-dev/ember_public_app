@@ -378,17 +378,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Live Earner Revenue Share (fetches active percentage from database) ---
+  // Drives every place on this page that quotes the earner's revenue share, so
+  // a commission change in the admin panel can never drift out of sync with
+  // this page's copy again — this is what previously let the marketing copy
+  // sit stuck at a stale "60%" for earners after the real split changed.
   const COMMISSION_API_URL = 'https://api.emberconnect.in/v1/commission/public';
   const statEarnerRevenueShareEl = document.getElementById('statEarnerRevenueShare');
+  const earnerRevenueShareTextEls = [
+    document.getElementById('earnerRevenueSharePctFeature'),
+    document.getElementById('earnerRevenueSharePctFaq'),
+  ].filter(Boolean);
 
-  if (statEarnerRevenueShareEl) {
+  if (statEarnerRevenueShareEl || earnerRevenueShareTextEls.length) {
     fetch(COMMISSION_API_URL)
       .then((res) => (res.ok ? res.json() : Promise.reject(new Error('bad response'))))
       .then((data) => {
         if (data && typeof data.female_rate_pct === 'number') {
           const pct = Math.round(data.female_rate_pct);
-          statEarnerRevenueShareEl.setAttribute('data-target', String(pct));
-          statEarnerRevenueShareEl.textContent = String(pct);
+          if (statEarnerRevenueShareEl) {
+            statEarnerRevenueShareEl.setAttribute('data-target', String(pct));
+            statEarnerRevenueShareEl.textContent = String(pct);
+          }
+          earnerRevenueShareTextEls.forEach((el) => {
+            el.textContent = String(pct);
+          });
         }
       })
       .catch(() => {
