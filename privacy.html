@@ -45,7 +45,7 @@
   <main>
     <div class="legal-hero fade-in">
       <h1>Privacy <span>Policy</span></h1>
-      <p class="legal-meta">Version 2026-10-08 · Last updated 8 October 2026</p>
+      <p class="legal-meta">Version 2026-10-12 · Last updated 12 October 2026</p>
     </div>
 
     <article class="legal-content fade-in">
@@ -66,7 +66,8 @@
         <li><strong>Verification (earners):</strong> a short verification video and passphrase used to confirm identity. Verification videos are reviewed manually by our staff; we do not perform automated biometric or facial-recognition matching on them.</li>
         <li><strong>Usage &amp; calls:</strong> connection requests, call metadata (participants, timestamps, duration), subscriptions, and earnings. <strong>The audio and video of your calls are transmitted in real time and are not recorded or stored by us.</strong></li>
         <li><strong>Chat messages:</strong> the text content and timestamps of messages you exchange with a connected user through the in-app chat feature. Unlike calls, message text is stored on our servers (not just relayed) so both participants can view the conversation.</li>
-        <li><strong>Payments:</strong> transaction identifiers and, for payouts, masked bank/UPI details. Full card/bank credentials are handled by our payment processor and are never stored by us.</li>
+        <li><strong>Payments:</strong> transaction identifiers for subscriptions. Card and payment credentials you use to pay are handled by our payment processor (Razorpay) and are never stored by us.</li>
+        <li><strong>Payout details (earners only):</strong> if you choose to receive earnings, the payout account you provide — either your UPI ID, or your bank account holder name, account number and IFSC code — and the time and version of the consent you gave when adding it.</li>
         <li><strong>Device &amp; technical:</strong> push-notification (FCM) token, IP address, and app/diagnostic logs.</li>
         <li><strong>Advertising:</strong> your device's resettable advertising identifier (Google Advertising ID) and coarse, non-precise ad-related signals, collected by Google AdMob to serve and measure in-app ads (see Section 5).</li>
       </ul>
@@ -83,6 +84,7 @@
         <li>facilitate video/voice calls and enforce call time limits;</li>
         <li>facilitate text messaging between connected users and enforce free-message limits;</li>
         <li>process subscriptions, commissions, and earner payouts;</li>
+        <li>pay your earnings to the payout account you provide, and keep records of those payments;</li>
         <li>send service and safety notifications;</li>
         <li>show and measure in-app advertising;</li>
         <li>prevent fraud, abuse, and violations of our Terms; and</li>
@@ -107,6 +109,13 @@
         Grievance Officer. Withdrawing consent will require us to stop most processing and may mean
         you can no longer use the Platform. Withdrawal does not affect processing already carried out
         lawfully.
+      </p>
+      <p>
+        Payout details are collected only with a separate, specific consent that you give on the Payout
+        details screen when you add or change them. We record the time and the version of the wording
+        you agreed to. You can change your payout details at any time; you can withdraw this consent by
+        contacting our Grievance Officer, in which case we will stop using the details and will be
+        unable to pay further earnings until new details are provided.
       </p>
 
       <h2>5. Advertising</h2>
@@ -140,13 +149,15 @@
           <tr><td>Google Cloud Memorystore (Redis)</td><td>Session and rate-limit state cache</td><td>India (Mumbai)</td></tr>
           <tr><td>100ms</td><td>Real-time video/voice call infrastructure (media relayed in real time, not stored)</td><td>Global</td></tr>
           <tr><td>Razorpay</td><td>Payment processing and payouts</td><td>India</td></tr>
+          <tr><td>Your bank / the UPI network (NPCI)</td><td>Transferring your earnings to the payout account you provided</td><td>India</td></tr>
           <tr><td>Google AdMob</td><td>In-app advertising (see Section 5)</td><td>Global</td></tr>
         </tbody>
       </table>
       <p>
         Other users of the Platform can see the profile information you choose to publish
         (name, photos, bio, and similar profile fields). Your phone number is never shown to
-        other users.
+        other users. Your payout details are used only to pay you; they are never shown to other
+        users and never shared with advertisers.
       </p>
 
       <h2>7. International Transfers</h2>
@@ -165,6 +176,7 @@
         <li>Call, subscription, and transaction records: retained while your account is active and thereafter as required for financial, tax, and legal compliance.</li>
         <li>Chat messages: retained while the connection and both accounts remain active; deleted or irreversibly anonymised on account deletion, except where retention is legally required.</li>
         <li>Verification media: retained while your account is active and deleted after account closure.</li>
+        <li>Payout details: kept while your earner account is active; deleted when you delete your account. Records of payouts already made (amount, date, reference) are kept as required for financial and tax compliance.</li>
         <li>Server and diagnostic logs: retained for up to 12 months, or longer where needed for an ongoing security or legal matter.</li>
       </ul>
       <p>
@@ -189,7 +201,13 @@
         We use reasonable technical and organisational safeguards, including encrypted transport
         (HTTPS), secrets held in a managed secret store, access controls and role-based admin
         permissions, signed time-limited URLs for sensitive media, and audit logging of
-        administrative actions. No system is perfectly secure; in the event of a personal-data
+        administrative actions. Payout details receive additional protection: the UPI ID, account
+        number and account holder name are encrypted with AES-256 before they are stored, and the
+        encryption key is held separately from the database. You only ever see them in masked form
+        (for example, ••••1234). Our finance staff can view them in full only after re-verifying their
+        identity with a one-time password, the full details are hidden again automatically after a
+        short time, and every such view is recorded in an audit log. We notify you whenever your
+        payout details are changed. No system is perfectly secure; in the event of a personal-data
         breach we will notify the Data Protection Board and affected users as required by law.
       </p>
 
